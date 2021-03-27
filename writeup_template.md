@@ -127,7 +127,19 @@ Here's a [link to my video result][my_video1]
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-In the common situation, my pipeline works well. 
+
+ 
 
 But an error occured in a situation another car passed the next lane of ego vehicle's driving lane. I think that it's caused from the 2nd order polynomial line fitting because I applied some margin area for fitting that.
 For making more robust, I need to apply the ROI(Region of Interest) more tightly and fitting margin also.
+
+* Considerations of issues faced :  
+In the common situation, my pipeline works well.
+But an error occured in a specific situation that the ego vehicle pass the uneven road. It means pitch angle happened to the ego vehicle
+
+* Possible improvements to the pipeline :  
+I think the camera calibration need to improve. I made the pipeline in ideal road conditions.  
+For improvement, it would be better taht do not follow new line fitting under the road condition is bad.
+
+* Scenarios where the pipeline might fail :  
+If the road's condition is bad or uneven, the ego vehicle's movement is different with in common situation.
